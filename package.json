@@ -1,14 +1,18 @@
 {
-  "name": "vite_react_shadcn_ts",
+  "name": "social-motion",
   "private": true,
-  "version": "0.0.0",
+  "version": "1.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
     "build:dev": "vite build --mode development",
+    "build:prod": "vite build --mode production",
+    "preview": "vite preview",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "lint:fix": "eslint . --fix",
+    "type-check": "tsc --noEmit",
+    "analyze": "vite build --mode production && source-map-explorer 'dist/assets/*.js'"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.9.0",
@@ -78,9 +82,12 @@
     "globals": "^15.9.0",
     "lovable-tagger": "^1.1.8",
     "postcss": "^8.4.47",
+    "source-map-explorer": "^2.5.3",
     "tailwindcss": "^3.4.11",
+    "terser": "^5.39.0",
     "typescript": "^5.5.3",
     "typescript-eslint": "^8.0.1",
-    "vite": "^5.4.1"
+    "vite": "^5.4.1",
+    "vite-plugin-compression2": "^1.3.3"
   }
 }
