@@ -17,6 +17,14 @@ export default defineConfig(({ mode }) => ({
       // '/api': 'http://localhost:3000'
     }
   },
+  preview: {
+    port: 8080,
+    strictPort: true,
+    cors: true,
+    headers: {
+      'Cache-Control': 'no-cache',
+    },
+  },
   plugins: [
     react(),
     mode === 'development' &&
